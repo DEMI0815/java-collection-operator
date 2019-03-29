@@ -1,7 +1,6 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionOperator {
@@ -87,6 +86,6 @@ public class CollectionOperator {
             }
         }
 
-        return list
+        return list;
     }
 }
