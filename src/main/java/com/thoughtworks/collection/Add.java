@@ -1,7 +1,6 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Add {
@@ -15,7 +14,7 @@ public class Add {
             }
         } else {
             for(int i = rightBorder; i <= leftBorder; i++) {
-                if (i % 2 = 0) {
+                if (i % 2 == 0) {
                     evenSum += i;
                 }
             }
@@ -120,8 +119,8 @@ public class Add {
     }
 
     public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
-        List evenList = this.returnEvenList(arrayList);
-        List oddList = this.returnOddList(arrayList);
+        List<Integer> evenList = this.returnEvenList(arrayList);
+        List<Integer> oddList = this.returnOddList(arrayList);
 
         for (int i = 0; i < evenList.size(); i++) {
             for (int j = 0; j < evenList.size(); j++) {
@@ -143,12 +142,11 @@ public class Add {
             }
         }
 
-        List<Integer> result = evenList;
         for (Integer anOddList : oddList) {
-            result.add(anOddList);
+            evenList.add(anOddList);
         }
 
-        return result;
+        return evenList;
     }
 
     public List<Integer> getProcessedList(List<Integer> arrayList) {
@@ -162,9 +160,9 @@ public class Add {
 
     private List<Integer> returnEvenList(List<Integer> arrayList) {
         List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i) % 2 == 0) {
-                result.add(arrayList.get(i));
+        for (Integer anArrayList : arrayList) {
+            if (anArrayList % 2 == 0) {
+                result.add(anArrayList);
             }
         }
         return result;
@@ -172,9 +170,9 @@ public class Add {
 
     private List<Integer> returnOddList(List<Integer> arrayList) {
         List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i) % 2 != 0) {
-                result.add(arrayList.get(i));
+        for (Integer anArrayList : arrayList) {
+            if (anArrayList % 2 != 0) {
+                result.add(anArrayList);
             }
         }
         return result;
