@@ -49,7 +49,7 @@ public class MyMap {
                     first--;
                 }
 
-                String item = letterList.get(first) + letterList.get(second);
+                String item = letterList.get(first - 1) + letterList.get(second - 1);
                 list.add(item);
             }
         }
